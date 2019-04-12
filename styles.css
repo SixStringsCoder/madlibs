@@ -7,6 +7,11 @@ body {
   justify-content: center;
 }
 
+.wrapper {
+  padding: 0;
+  min-height: calc(100vh - 96px);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Chewy', cursive;
   letter-spacing: 1px;
@@ -16,16 +21,9 @@ label {
   font-family: 'Bree Serif', serif;
 }
 
-/* #body-content-container {
-  height: 100vw;
+#madlibForm {
+  /* width: 60vw; */
 }
-
-#form-container {
-  height: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
 
 .form-control {
   border: none;
@@ -34,13 +32,18 @@ label {
 }
 
 .form-inline {
-  margin: 20px;
+  margin: 15px;
+}
+
+.results-dark-bg {
+  top: 11%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .2);
 }
 
 .results-container {
-  width: 0%;
-  height: 0%;
-  visibility: hidden;
   transition: all 1s;
   background-color: #fff;
 }

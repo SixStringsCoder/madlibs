@@ -10,6 +10,7 @@ const view = {
   init: function() {
     this.madform = document.querySelector('#form-group');
     this.title = document.querySelector('#title');
+    this.resultsContBG = document.querySelector('.results-dark-bg');
     this.resultsCont = document.querySelector('.results-container');
     this.results_paragraph = document.querySelector('#results-paragraph');
     this.submit = document.querySelector('#submit-entries');
@@ -18,6 +19,7 @@ const view = {
     this.renderForm();
     this.submit.addEventListener('click', () => this.renderResults());
     this.clear.addEventListener('click', () => this.clearForm());
+    this.resultsContBG.addEventListener('click', () => this.clearForm());
   },
 
   renderTitle: function() {
@@ -66,9 +68,8 @@ const view = {
   },
 
   showResults: function() {
-    this.resultsCont.style.width = "100%";
-    this.resultsCont.style.height = "50%";
-    this.resultsCont.style.visibility = "visible";
+    this.resultsContBG.classList.add('d-flex', 'justify-content-center');
+    this.resultsCont.classList.remove('d-none');
   },
 
   clearForm: function() {
@@ -77,9 +78,8 @@ const view = {
     this.inputs.forEach(input => {
       input.value = "";
     });
-    this.resultsCont.style.width = "0%";
-    this.resultsCont.style.height = "0%";
-    this.resultsCont.style.visibility = "hidden";
+    this.resultsContBG.classList.remove('d-flex', 'justify-content-center');
+    this.resultsCont.classList.add('d-none');
   }
 
 }

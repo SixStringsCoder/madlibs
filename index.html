@@ -9,40 +9,47 @@
 
     <title>It All Makes Sense on Planet Shishkabob</title>
   </head>
-  <body>
-    <header class="col-sm-12 bg-success mb-4">
-      <div class="container text-center text-white">
-        <h1 class="display-3 mb-1">MadLibs</h1>
-        <p class="lead">Bootstrapped Edition</p>
-      </div>
-    </header>
-
-    <!-- Parts of Speech (POSP) -->
-    <div class="container col-sm-6" id="form-container">
-      <form class="form-group border border-dark p-4" id="form-group">
-      <!-- MadLib POSP gets here via JS -->
-      </form>
+<div class="wrapper container-fluid col-sm-12 mx-0" id="bg-wrapper">
+  <header class="col-sm-12 container-fluid bg-success py-1">
+    <div class="container text-center text-white">
+      <h1 class="display-3 mb-1">MadLibs</h1>
+      <p class="lead mb-1">Bootstrapped Edition</p>
     </div>
+  </header>
 
-    <div class="container text-center">
-      <button type="submit" id="submit-entries" class="btn btn-lg btn-outline-primary">Make MadLib!</button>
-      <button type="submit" id="clear-entries" class="btn btn-lg btn-outline-primary">Clear Form</button>
+  <!-- Parts of Speech (POSP) -->
+  <section id="madlibForm" class="py-2">
+      <div class="container col-sm-12 d-flex justify-content-center">
+        <div class="card ">
+          <div class="card-body">
+              <form class="form-group border border-dark p-4" id="form-group">
+                <!-- MadLib POSP gets here via JS -->
+              </form>
+            </div>
+          </div>
+       </div>
+  </section>
+
+  <div class="container text-center">
+    <button type="submit" id="submit-entries" class="btn btn-lg btn-outline-primary">Make MadLib!</button>
+    <button type="submit" id="clear-entries" class="btn btn-lg btn-outline-primary">Clear Form</button>
+  </div><!-- /Parts of Speech (POSP) -->
+
+  <!-- MadLib Result -->
+  <section class="col-sm-12 d-none position-absolute results-dark-bg">
+    <div class="col-sm-10 d-none position-absolute results-container container p-4 mt-4 mx-2 border border-dark">
+      <p id="results-paragraph">
+
+      </p>
     </div>
-    <!-- /Parts of Speech (POSP) -->
+  </section><!-- /MadLib Result -->
 
+</div><!-- /Wrapper -->
 
-    <!-- MadLib Result -->
-      <div class="col-sm-10 position-absolute results-container container p-4 mt-4 mx-2 border border-dark">
-        <p id="results-paragraph">
-
-        </p>
-      </div>
-    <!-- /MadLib Result -->
-
-    <footer class="container col-sm-12 text-center mt-4 py-4 bg-success text-white">
-      MadLib by Roger Price & Leonard Stern | A Price Stern Sloan Classic<br />
-      web programming by SteveHanlon 2019
-    </footer>
+<footer class="container col-sm-12 text-center mt-3 py-4 bg-success text-white">
+  MadLib by Roger Price & Leonard Stern | A Price Stern Sloan Classic<br />
+  web programming by SteveHanlon 2019
+</footer>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script type="text/javascript" src="script.js"></script>
   </body>
